@@ -3,7 +3,7 @@ Description=uWSGI service
 After=syslog.target
 
 [Service]
-ExecStart=~/myvenv/bin/uwsgi -i ~/HBTI/backend/.config/uwsgi/backend.ini
+ExecStart=/home/ubuntu/myvenv/bin/uwsgi -i /home/ubuntu/HBTI/backend/.config/uwsgi/backend.ini
 
 Restart=always
 KillSignal=SIGQUIT
