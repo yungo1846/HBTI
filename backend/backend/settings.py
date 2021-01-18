@@ -82,7 +82,7 @@ CORS_ORIGIN_WHITELIST = [
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-if DEBUG:
+if not DEBUG:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
@@ -100,7 +100,7 @@ else:
             'NAME': 'hbti-db-postgresql',
             'USER': 'yungo1846',
             'PASSWORD': os.getenv('server_db_password'),
-            'HOST': '127.0.0.1',
+            'HOST': 'hbti-db-postgresql.cblipspnkvrs.ap-northeast-2.rds.amazonaws.com',
             'PORT': '5432'
         }
     }
