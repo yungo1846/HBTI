@@ -16,9 +16,9 @@ const HBTItestQuestions = [
   },
   {
     id: 3,
-    question: "운동을 하려는데, 헬스장이 문을 닫았다??! 당신의 운동 방법은?",
-    answer1: { type: "E", answer: "야외 공원 기구로 운동한다." },
-    answer2: { type: "I", answer: "혼자 홈트를 시도해본다." },
+    question: "당신이 더 선호하는 헬스장은?",
+    answer1: { type: "E", answer: "넓고 기구도 많지만 사람도 많은 헬스장" },
+    answer2: { type: "I", answer: "규모는 작지만 거의 전세내고 쓸 수 있는 헬스장" },
     type: "E/I",
   },
   {
