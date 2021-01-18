@@ -26,7 +26,7 @@ SECRET_KEY = "05x2!f6p=^u939c_-zsxif_m98f8tw#pbxxcbiq(7&8gg-h&&$"
 Local = False
 DEBUG = True
 
-ALLOWED_HOSTS = ['15.164.48.35']
+ALLOWED_HOSTS = ['15.164.48.35', ".ap-northeast-2.compute.amazonaws.com"]
 
 
 # Application definition
