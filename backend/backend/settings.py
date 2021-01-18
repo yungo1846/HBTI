@@ -26,7 +26,7 @@ SECRET_KEY = os.getenv('secret_key')
 Local = False
 DEBUG = True
 
-ALLOWED_HOSTS = ['13.125.251.133']
+ALLOWED_HOSTS = ['3.34.97.201']
 
 
 # Application definition
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
-    'http://13.125.251.133:3000'
+    'http://3.34.97.201:3000'
 ]
 
 # Database
