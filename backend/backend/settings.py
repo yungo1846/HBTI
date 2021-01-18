@@ -86,12 +86,8 @@ CORS_ORIGIN_WHITELIST = [
 if Local:
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'postgres_db',
-            'USER': 'yungo1846',
-            'PASSWORD': os.getenv('local_db_password'),
-            'HOST': '127.0.0.1',
-            'PORT': '5432'
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": "db.sqlite3",
         }
     }
 else:
