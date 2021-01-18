@@ -1,0 +1,64 @@
+#common-question-container {
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  #gender-container {
+    display: flex;
+    flex-direction: row;
+    .gender-box {
+      background: #f7f7f7 0% 0% no-repeat padding-box;
+      width: 120px;
+      height: 120px;
+      border-radius: 12px;
+      margin: 0 10px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      span {
+        font-size: 1.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 120px;
+        border-radius: 12px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
+  .question-box {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  #age-box {
+    display: flex;
+    justify-content: baseline;
+  }
+  input {
+    margin-left: 20px;
+    height: 1.8rem;
+    border-color: #b088f9;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  #next-button {
+    margin-top: 70px;
+    width: 332px;
+    height: 52px;
+    background-color: #f7f7f7;
+    border-style: solid;
+    border-radius: 43px;
+    border-width: 2px;
+    border-color: #b088f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: normal normal bold 16px/24px Noto Sans KR;
+    color: black;
+    cursor: pointer;
+  }
+}
