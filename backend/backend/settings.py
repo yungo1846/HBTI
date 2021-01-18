@@ -98,10 +98,10 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'hbti-db-postgresql',
+            'NAME': 'hbti',
             'USER': 'yungo1846',
             'PASSWORD': os.getenv('server_db_password'),
-            'HOST': 'hbti-db-postgresql.cblipspnkvrs.ap-northeast-2.rds.amazonaws.com',
+            'HOST': 'hbti.cblipspnkvrs.ap-northeast-2.rds.amazonaws.com',
             'PORT': '5432'
         }
     }
