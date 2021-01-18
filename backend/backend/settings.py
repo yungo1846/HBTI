@@ -23,6 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('secret_key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
+Local = True
 DEBUG = True
 
 ALLOWED_HOSTS = ['52.79.250.59']
@@ -82,7 +83,7 @@ CORS_ORIGIN_WHITELIST = [
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-if not DEBUG:
+if Local:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
