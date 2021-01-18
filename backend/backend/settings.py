@@ -26,7 +26,7 @@ SECRET_KEY = os.getenv('secret_key')
 Local = False
 DEBUG = True
 
-ALLOWED_HOSTS = ['52.79.250.59']
+ALLOWED_HOSTS = ['13.125.251.133']
 
 
 # Application definition
