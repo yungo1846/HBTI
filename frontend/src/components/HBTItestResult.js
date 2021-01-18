@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import HBTItestResults from "../results/HBTItestResults";
 import axios from "axios";
 import html2canvas from "html2canvas";
+import HBTItestResults from "../results/HBTItestResults";
+import { backEndUrl } from "../common/Urls";
 
 const HBTItestResult = ({ submittedList, userInfos }) => {
   function mouseOver(e) {
@@ -125,7 +126,7 @@ const HBTItestResult = ({ submittedList, userInfos }) => {
     questions[`q${i + 1}`] = submittedList[i];
   }
 
-  axios.post("http://127.0.0.1:8000/hbti/create/", {
+  axios.post(`${backEndUrl}/hbti/create/`, {
     user: "익명",
     result: type,
     ...userInfos,

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import html2canvas from "html2canvas";
 import HelchangTestResults from "../results/HelchangTestResults";
+import { backEndUrl } from "../common/Urls";
 
 const HelchangTestResult = ({ submittedList, userInfos }) => {
   function mouseOver(e) {
@@ -67,7 +68,7 @@ const HelchangTestResult = ({ submittedList, userInfos }) => {
     questions[`q${i + 1}`] = submittedList[i];
   }
 
-  axios.post("http://127.0.0.1:8000/helchang-ability/create/", {
+  axios.post(`${backEndUrl}/helchang-ability/create/`, {
     user: "익명",
     result: character,
     totalScore: totalScore,
