@@ -77,13 +77,13 @@ const HBTItestResult = ({ submittedList, userInfos }) => {
     newLogo.innerHTML = `<img src="/image/logo.png" alt="logo" />`;
     const newResultBox = new Promise(function (resolve, reject) {
       document.getElementById("result-box").insertAdjacentElement("afterbegin", newLogo);
-      setTimeout(function () {
-        window.scrollTo(0, 0);
-      }, 0);
     });
     newResultBox
       .then(
-        html2canvas(document.getElementById("result-box")).then((canvas) => {
+        html2canvas(document.getElementById("result-box"), {
+          scrollX: 0,
+          scrollY: -window.scrollY,
+        }).then((canvas) => {
           saveAs(canvas.toDataURL("image/png", 1), "hbti-result.png");
         })
       )
