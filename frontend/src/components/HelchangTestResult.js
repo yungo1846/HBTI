@@ -88,6 +88,7 @@ const HelchangTestResult = ({ submittedList, userInfos }) => {
         <div id="helchang-character">{character}</div>
         <div id="helchang-description">&nbsp;{description}</div>
       </div>
+      <div id="alert-info">인앱 브라우저에서 접속 시 캡쳐기능이 동작하지 않습니다.</div>
       <div
         className="home-button"
         onClick={onCapture}

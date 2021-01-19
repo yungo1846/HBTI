@@ -144,7 +144,7 @@ const HBTItestResult = ({ submittedList, userInfos }) => {
         <div className="hbti-exercise">어울리는 운동: {recommendedExercise}</div>
         <div className="hbti-exercise">안 어울리는 운동: {unrecommendedExercise}</div>
       </div>
-      <div id="alert-info">카카오톡 링크에서 접속 시 캡쳐기능이 동작하지 않습니다.</div>
+      <div id="alert-info">인앱 브라우저에서 접속 시 캡쳐기능이 동작하지 않습니다.</div>
       <div
         className="home-button"
         onClick={onCapture}
