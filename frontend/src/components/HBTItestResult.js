@@ -80,7 +80,7 @@ const HBTItestResult = ({ submittedList, userInfos }) => {
     document.getElementById("viewportMeta").setAttribute("content", "width=800");
     html2canvas(document.getElementById("result-box"), {
       scrollX: 0,
-      scrollY: -window.scrollY,
+      scrollY: -window.pageYOffset,
     })
       .then((canvas) => {
         saveAs(canvas.toDataURL("image/png", 1), "hbti-result.png");
