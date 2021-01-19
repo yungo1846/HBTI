@@ -72,7 +72,6 @@ const HBTItestResult = ({ submittedList, userInfos }) => {
   }
 
   function onCapture() {
-    window.scrollTo(0, 0);
     const newLogo = document.createElement("div");
     newLogo.id = "logo";
     newLogo.innerHTML = `<img src="/image/logo.png" alt="logo" />`;
@@ -80,6 +79,9 @@ const HBTItestResult = ({ submittedList, userInfos }) => {
     const newResultBox = new Promise(function (resolve, reject) {
       document.getElementById("result-box").insertAdjacentElement("afterbegin", newLogo);
       document.getElementById("viewportMeta").setAttribute("content", "width=800");
+      setTimeout(function () {
+        window.scrollTo(0, 0);
+      }, 100);
     });
     newResultBox
       .then(
