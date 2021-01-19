@@ -80,6 +80,7 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
     'http://15.164.48.35:3000'
     'http://15.164.48.35'
+    'http://15.164.48.35:8000'
 ]
 
 # Database
