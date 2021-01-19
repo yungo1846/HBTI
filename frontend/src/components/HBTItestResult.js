@@ -72,22 +72,23 @@ const HBTItestResult = ({ submittedList, userInfos }) => {
   }
 
   function onCapture() {
+    window.scrollTo(0, 0);
     const newLogo = document.createElement("div");
     newLogo.id = "logo";
     newLogo.innerHTML = `<img src="/image/logo.png" alt="logo" />`;
+    const vp = document.getElementById("viewportMeta").getAttribute("content");
     const newResultBox = new Promise(function (resolve, reject) {
       document.getElementById("result-box").insertAdjacentElement("afterbegin", newLogo);
+      document.getElementById("viewportMeta").setAttribute("content", "width=800");
     });
     newResultBox
       .then(
-        html2canvas(document.getElementById("result-box"), {
-          scrollX: 0,
-          scrollY: -window.scrollY,
-        }).then((canvas) => {
+        html2canvas(document.getElementById("result-box")).then((canvas) => {
           saveAs(canvas.toDataURL("image/png", 1), "hbti-result.png");
         })
       )
-      .then(document.getElementById("result-box").removeChild(newLogo));
+      .then(document.getElementById("result-box").removeChild(newLogo))
+      .then(document.getElementById("viewportMeta").setAttribute("content", vp));
   }
 
   function saveAs(uri, filename) {
