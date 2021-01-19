@@ -28,7 +28,6 @@ const CommonQuestion = ({ handleSubmit }) => {
   };
 
   const handleClick = () => {
-    console.log(typeof +age);
     if (gender !== "" && age !== "") {
       if (+age <= 0) {
         alert("정확한 나이를 입력해주세요.");
