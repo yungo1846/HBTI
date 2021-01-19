@@ -80,10 +80,8 @@ const HBTItestResult = ({ submittedList, userInfos }) => {
     });
     newResultBox
       .then(
-        html2canvas(document.getElementById("result-box"), {
-          scrollX: 0,
-          scrollY: -window.scrollY,
-        }).then((canvas) => {
+        window.scrollTo(0, 0);
+        html2canvas(document.getElementById("result-box")).then((canvas) => {
           saveAs(canvas.toDataURL("image/png", 1), "hbti-result.png");
         })
       )
