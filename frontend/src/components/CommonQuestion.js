@@ -3,7 +3,7 @@ import "./CommonQuestion.scss";
 
 const CommonQuestion = ({ handleSubmit }) => {
   const [gender, setGender] = useState("");
-  const [age, setAge] = useState(0);
+  const [age, setAge] = useState("");
 
   function mouseOver(e) {
     if (e.target.style["background-color"] !== "rgb(98, 28, 148)") {
@@ -28,10 +28,21 @@ const CommonQuestion = ({ handleSubmit }) => {
   };
 
   const handleClick = () => {
-    if (gender !== "" && age !== 0) {
-      handleSubmit(gender, age);
+    console.log(typeof +age);
+    if (gender !== "" && age !== "") {
+      if (+age <= 0) {
+        alert("정확한 나이를 입력해주세요.");
+        return;
+      }
+      if (!isNaN(+age)) {
+        handleSubmit(gender, age);
+      } else {
+        alert("나이는 숫자를 입력해주세요.");
+        return;
+      }
     } else {
       alert("비어있는 정보를 입력해주세요.");
+      return;
     }
   };
 
