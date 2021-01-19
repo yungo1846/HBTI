@@ -79,6 +79,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
     'http://15.164.48.35:3000'
+    'http://15.164.48.35'
 ]
 
 # Database
