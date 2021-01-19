@@ -72,13 +72,9 @@ const HBTItestResult = ({ submittedList, userInfos }) => {
   }
 
   function onCapture() {
-    const vp = document.getElementById("viewportMeta").getAttribute("content");
-    document.getElementById("viewportMeta").setAttribute("content", "width=800");
-    html2canvas(document.getElementById("result-box"))
-      .then((canvas) => {
-        saveAs(canvas.toDataURL("image/png", 1), "hbti-result.png");
-      })
-      .then(document.getElementById("viewportMeta").setAttribute("content", vp));
+    html2canvas(document.getElementById("result-box")).then((canvas) => {
+      saveAs(canvas.toDataURL("image/png", 1), "hbti-result.png");
+    });
   }
 
   function saveAs(uri, filename) {
