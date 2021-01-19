@@ -22,19 +22,22 @@ const HelchangTestResult = ({ submittedList, userInfos }) => {
     const newLogo = document.createElement("div");
     newLogo.id = "logo";
     newLogo.innerHTML = `<img src="/image/logo.png" alt="logo" />`;
-    const vp = document.getElementById("viewportMeta").getAttribute("content");
-    const newResultBox = new Promise(function (resolve, reject) {
-      document.getElementById("result-box").insertAdjacentElement("afterbegin", newLogo);
-      document.getElementById("viewportMeta").setAttribute("content", "width=800");
-    });
-    newResultBox
-      .then(
-        html2canvas(document.getElementById("result-box")).then((canvas) => {
+    document.getElementById("result-box").insertAdjacentElement("afterbegin", newLogo);
+    function setTimer(callback) {
+      setTimeout(function () {
+        window.scrollTo(0, 0);
+        console.log("timer");
+        callback();
+      }, 500);
+    }
+    setTimer(function () {
+      html2canvas(document.getElementById("result-box"))
+        .then((canvas) => {
           saveAs(canvas.toDataURL("image/png", 1), "hbti-result.png");
+          console.log("yes");
         })
-      )
-      .then(document.getElementById("result-box").removeChild(newLogo))
-      .then(document.getElementById("viewportMeta").setAttribute("content", vp));
+        .then(document.getElementById("result-box").removeChild(newLogo));
+    });
   }
 
   function saveAs(uri, filename) {
