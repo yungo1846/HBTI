@@ -76,12 +76,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000',
-    'http://15.164.48.35:3000'
-    'http://15.164.48.35'
-    'http://15.164.48.35:8000'
-]
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ORIGIN_ALLOW_ALL = True
+
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
