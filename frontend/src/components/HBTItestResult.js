@@ -72,9 +72,22 @@ const HBTItestResult = ({ submittedList, userInfos }) => {
   }
 
   function onCapture() {
-    html2canvas(document.getElementById("result-box")).then((canvas) => {
-      saveAs(canvas.toDataURL("image/png", 1), "hbti-result.png");
+    const newLogo = document.createElement("div");
+    newLogo.id = "logo";
+    newLogo.innerHTML = `<img src="/image/logo.png" alt="logo" />`;
+    const newResultBox = new Promise(function (resolve, reject) {
+      document.getElementById("result-box").insertAdjacentElement("afterbegin", newLogo);
     });
+    newResultBox
+      .then(
+        html2canvas(document.getElementById("result-box"), {
+          scrollX: 0,
+          scrollY: -window.scrollY,
+        }).then((canvas) => {
+          saveAs(canvas.toDataURL("image/png", 1), "hbti-result.png");
+        })
+      )
+      .then(document.getElementById("result-box").removeChild(newLogo));
   }
 
   function saveAs(uri, filename) {
