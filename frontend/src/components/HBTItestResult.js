@@ -77,10 +77,10 @@ const HBTItestResult = ({ submittedList, userInfos }) => {
     newLogo.innerHTML = `<img src="/image/logo.png" alt="logo" />`;
     const newResultBox = new Promise(function (resolve, reject) {
       document.getElementById("result-box").insertAdjacentElement("afterbegin", newLogo);
+      window.scrollTo(0, 0);
     });
     newResultBox
       .then(
-        window.scrollTo(0, 0);
         html2canvas(document.getElementById("result-box")).then((canvas) => {
           saveAs(canvas.toDataURL("image/png", 1), "hbti-result.png");
         })
