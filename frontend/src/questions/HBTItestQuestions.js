@@ -44,8 +44,8 @@ const HBTItestQuestions = [
   {
     id: 6,
     question: "즐겨보는 TV 프로그램에 몸짱 연예인이 나왔다. 당신이 지금 드는 생각은?",
-    answer1: { type: "S", answer: "와...저 형은 3대 몇 칠까?" },
-    answer2: { type: "N", answer: "와...나도 저 형처럼 되고 싶다!" },
+    answer1: { type: "S", answer: "와...저 사람은 어떤 운동을 할까?" },
+    answer2: { type: "N", answer: "와...나도 저 사람처럼 되고 싶다!" },
     type: "S/N",
   },
   {
