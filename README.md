@@ -2,4 +2,6 @@
 
 ## Web site for checking health ability and personality 🥇
 
-## URL: www.hbti.co.kr
+### stack: React, Django
+
+### URL: www.hbti.co.kr
